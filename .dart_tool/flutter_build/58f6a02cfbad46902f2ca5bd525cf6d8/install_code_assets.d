@@ -1,0 +1,1 @@
+ /Users/fabioalvaropereira/workspaces/diversos/pocDozero/ola_mundo/.dart_tool/flutter_build/58f6a02cfbad46902f2ca5bd525cf6d8/native_assets.json: 
