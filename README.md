@@ -1,6 +1,11 @@
-# Projeto Gemini Olá Mundo
+# Flutter Security | Como Implementei e Testei o SSL Pinning do Zero (Nativo vs. Dio)
 
 Este é um projeto de prova de conceito (PoC) desenvolvido em Flutter, criado com o auxílio do Gemini. O objetivo principal é demonstrar a implementação de uma aplicação Flutter seguindo uma arquitetura limpa e consumindo uma API para uma funcionalidade de verificação de status de saúde.
+
+## Artigo no medium 
+https://medium.com/@fabio.alvaro/flutter-security-como-implementei-e-testei-o-ssl-pinning-do-zero-nativo-vs-dio-9b465ab2b8d5
+
+
 
 ## Arquitetura
 
