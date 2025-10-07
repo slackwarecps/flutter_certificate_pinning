@@ -72,3 +72,4 @@
 
 # VS Code
 .vscode/
+.dart_tool/extension_discovery/vs_code.json
