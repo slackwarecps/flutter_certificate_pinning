@@ -50,3 +50,29 @@ A aplicação está configurada para se comunicar com um endpoint de API local:
     ```bash
     flutter run
     ```
+
+## COMO CONFIGURAR O VS CODE
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ola_mundo",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ola_mundo (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ola_mundo (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
+```
