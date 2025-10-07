@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gemini_ola_mundo/presenter/pages/padaria_page.dart';
 import 'package:get/get.dart';
 import 'package:gemini_ola_mundo/presenter/pages/saude_page.dart';
 
@@ -17,9 +18,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: '/',
+      initialRoute: '/padaria',
       getPages: [
         GetPage(name: '/', page: () => const MyHomePage(title: 'Flutter Demo Home Page')),
+        GetPage(name: '/padaria', page: () => const PadariaPage()),
         GetPage(name: '/saude', page: () => const SaudePage()),
       ],
     );

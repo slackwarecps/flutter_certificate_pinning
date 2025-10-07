@@ -26,7 +26,7 @@ siga o padrão de nomeação, por exemplo: add_cliente_page.dart, clientes_contr
 
 
 
-4.  Logging: Em vez de print, você deve usar developer.log.
+4.  Logging: Em vez de print, você deve usar developer.log ``` import 'dart:developer' as developer; ```
 5.  API: O endpoint base é http://localhost:8088 no servidor de mock-api.
     Emulador Android: O endpoint deve ser http://localhost:8088 pois o emulador de Android nao consegue chegar no localhost.
    servicos:  /sisbedev/v1/{{dominio}}
