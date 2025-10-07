@@ -40,7 +40,7 @@ A aplicação está configurada para se comunicar com um endpoint de API local:
     ```
 2.  **Entre na pasta do projeto:**
     ```bash
-    cd gemini_ola_mundo
+    cd flutter_certificate_pinning
     ```
 3.  **Instale as dependências:**
     ```bash

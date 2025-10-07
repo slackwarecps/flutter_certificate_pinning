@@ -1,0 +1,146 @@
+{
+  "uuid": "bf667143-1f81-488a-9e2c-2ce6871bbafb",
+  "lastMigration": 32,
+  "name": "Flutter Certificate Pinning Server",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8088,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "4f2b02ce-17bf-4159-bf95-b68620629e27",
+      "type": "http",
+      "documentation": "orange mock",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "ff5f5605-50bb-477b-be1b-175d230308d8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "bf0431b5-2400-43f3-96b8-6c126b14bff3",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "sisbedev/v1/auth/login",
+      "responses": [
+        {
+          "uuid": "08c415cd-3708-4704-900f-e1e7fbdf346c",
+          "body": "{\n  \"access_token\": \"eyJhepa-bob-esponja\",\n  \"expires_in\": 36000,\n  \"refresh_expires_in\": 0,\n  \"token_type\": \"Bearer\",\n  \"not-before-policy\": 0,\n  \"scope\": \"email profile\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "sucesso no login",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "cd144d2a-d52b-4f36-abcb-6f8805b8b68c",
+      "type": "http",
+      "documentation": "Health",
+      "method": "get",
+      "endpoint": "sisbedev/v1/health",
+      "responses": [
+        {
+          "uuid": "e14aa930-54a2-4183-a5a8-f3d33d234030",
+          "body": "{\n    \"name\": \"apis-sisbe2025-mockooon\",\n    \"description\": \"API que retorna os dados para o app sisbe2025\",\n    \"version\": \"1.0.1.06-10-2025-1919\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Sucesso",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "4f2b02ce-17bf-4159-bf95-b68620629e27"
+    },
+    {
+      "type": "route",
+      "uuid": "bf0431b5-2400-43f3-96b8-6c126b14bff3"
+    },
+    {
+      "type": "route",
+      "uuid": "cd144d2a-d52b-4f36-abcb-6f8805b8b68c"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": true,
+    "type": "PFX",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
