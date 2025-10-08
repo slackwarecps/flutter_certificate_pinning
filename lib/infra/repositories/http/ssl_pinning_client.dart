@@ -8,12 +8,12 @@ class SslPinningClient {
   // 1. O PIN: HASH SHA-256 DO MOCKOON
   // debian: 4E78214717132A545A8B139BDDC2FDDE0C4A8612E8517C531DB4C9F714F9B5A4
   // mockoon: 7DEDF94AB648D12EF68B61787E1D4C612AA595FB8E19D5D5B61FE67F20F40107
-  static const String _allowedSHA256Fingerprint = '4E78214717132A545A8B139BDDC2FDDE0C4A8612E8517C531DB4C9F714F9B5A4'; 
+  // SSL MOCKOON: 4E78214717132A545A8B139BDDC2FDDE0C4A8612E8517C531DB4C9F714F9B5A4
+  static const String _allowedSHA256Fingerprint = '76A52ED97D5FCAFBA73F512418965A56EACB03CA8753C2006230FDF4426DC66A'; 
 
 
   // 2. ENDPOINT BASE (Regra 5)
-  static const String _baseUrlx = 'https://10.0.2.2:8088/sisbedev/v1/';
-  static const String _baseUrl = 'https://192.168.1.100:8088/sisbedev/v1/';
+  static const String _baseUrl = 'https://10.0.2.2:8088/sisbedev/v1/';
   
   
   /// Cria e configura o HttpClient nativo com a lógica de Pinning.
@@ -24,6 +24,16 @@ class SslPinningClient {
     // 3. Implementação do Pinning: badCertificateCallback
     httpClient.badCertificateCallback = (X509Certificate cert, String host, int port) {
       
+
+      // O 'host' será '10.0.2.2'.
+      // O certificado (cert) terá o 'subject' como 'CN=dev.piadaruim.com.br'.
+      // Como estamos em um ambiente de desenvolvimento controlado, retornamos 'true'
+      // para aceitar o certificado mesmo que o nome do host não bata.
+      developer.log('AVISO: Aceitando certificado com nome de host inválido em ambiente de DEV. Host: $host, Cert Subject: ${cert.subject}');
+      //return true;
+
+
+
       // Cálculo do hash SHA-256 a partir do binário (cert.der)
       final receivedHashBytes = sha256.convert(cert.der).bytes;
       

@@ -5,7 +5,7 @@
   "endpointPrefix": "",
   "latency": 0,
   "port": 8088,
-  "hostname": "",
+  "hostname": "0.0.0.0",
   "folders": [],
   "routes": [
     {
@@ -115,10 +115,10 @@
   "proxyRemovePrefix": false,
   "tlsOptions": {
     "enabled": true,
-    "type": "PFX",
-    "pfxPath": "",
-    "certPath": "",
-    "keyPath": "",
+    "type": "CERT",
+    "pfxPath": "/Users/fabioalvaropereira/workspaces/diversos/pocDozero/flutter_certificate_pinning/mockoon/ca_certs/server.pfx",
+    "certPath": "/Users/fabioalvaropereira/lets_certs/fullchain.pem",
+    "keyPath": "/Users/fabioalvaropereira/lets_certs/privkey.pem",
     "caPath": "",
     "passphrase": ""
   },
